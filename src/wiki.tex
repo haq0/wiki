@@ -1,0 +1,127 @@
+\documentclass {report}
+
+% PKGS
+\usepackage{sectsty}
+\usepackage{hyperref}
+\usepackage{listings}
+
+
+% SETTINGS
+
+\allsectionsfont{\centering}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+% CMDS
+
+% #1 Name #2 Last Name #3 Site name #4 Date #5 Link
+\newcommand{\csite}[5]{
+  #2, #1. \textit{#3}. #4. \textit{\url{#5}} \newline
+}
+\newcommand{\link}[4]{
+  #1. \textit{#2}. \textit{\url{#4}}. #3 \newline
+}
+
+
+% About
+\title{Wiki}
+\author{arcticinferno}
+
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+
+\chapter{Introduction}
+
+\section{What is this wiki aiming to do?}
+Inside this wiki/document, we intend to document various parts of Linux that you may encur while switching. I have compiled a list of things that I intend to cover, and will put them in a section just ahead. This document will consist of everything we write, but I intend to eventually "port" it to a website format, but for now, it should be fine as a document.
+
+\section{What we will document}
+
+I will include a tree of things that will be documented ahead, but I would first like to thank the people from the following reddit threads for giving me a bunch of things to add.
+
+
+\link{Reddit}{r/linux}{April 2023}{https://www.reddit.com/r/linux/comments/12lyruw/im\_going\_to\_write\_a\_full\_progression\_guide\_for/}
+
+\link{Reddit}{r/linux}{April 2023}{https://www.reddit.com/r/linuxquestions/comments/12lzryp/im\_going\_to\_write\_a\_full\_progression\_guide\_for/}
+
+
+\textbf{Alright, now that we've got that out of the way, here are the things I'm going to document:}
+\textit{*also please note that this is not in order}
+
+\begin{enumerate}
+  \item Hardware
+    \begin{enumerate}
+      \item To Be Expanded (Supported hardwarem, good brands, etc.)
+    \end{enumerate}
+  \item Use Cases
+    \begin{enumerate}
+      \item Developing Software
+      \item Gaming
+      \item System Administration
+      \item To Be Expanded
+    \end{enumerate}
+  \item Installation
+    \begin{enumerate}
+      \item What is a Linux Distribution?
+        \begin{enumerate}
+          \item What makes up a "distro"
+            \begin{enumerate}
+              \item The Kernel
+              \item The Shell
+              \item The Applications
+              \item The Package Manager(s)
+            \end{enumerate}
+          \item Should I use a small distro? Should I use a large distro?
+          \item Why you shouldn't use Kali Linux as a desktop.
+        \end{enumerate}
+      \item Burning A USB Drive
+      \item Booting into the BIOS
+      \item Dual Booting - Benefits \& Disadvantages
+      \item Installing Linux
+    \end{enumerate}
+  \item System
+    \begin{enumerate}
+      \item Mounting Drives
+      \item Automounting Drives
+      \item File Structure
+      \item Networking
+      \item System Configuration
+      \item System Administration
+      \item Users
+    \end{enumerate}
+  \item Useful Resources
+    \begin{enumerate}
+      \item Arch Linux Wiki - https://wiki.archlinux.org/
+      \item Gentoo Linux Wiki - https://wiki.gentoo.org/
+    \end{enumerate}
+  \item Gaming
+  \item Virtual Machines
+    \begin{enumerate}
+      \item KVM
+      \item Xen
+      \item Virtual Box
+      \item QEMU + \{KVM, Xen\}
+    \end{enumerate}
+  \item Advanced Parts Of A Linux System
+    \begin{enumerate}
+      \item Types Of Distributions - Source Based / Binary Based
+      \item Init Systems
+      \item Boot Loaders
+      \item Kernel(s)
+      \item Filesystems
+    \end{enumerate}
+  \item Trying out more advanced software
+    \begin{enumerate}
+      \item Window Managers
+      \item Text Editors
+      \item Terminal Emulators
+    \end{enumerate}
+\end{enumerate}
+
+
+\end{document}
