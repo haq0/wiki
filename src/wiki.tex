@@ -123,5 +123,31 @@ I will include a tree of things that will be documented ahead, but I would first
     \end{enumerate}
 \end{enumerate}
 
+\chapter{Getting Started}
+\section{Installation}
+The majority of these steps will work for any Linux distribution, but I will specifically document the process for pop_os and artixlinux.
+\subsection{Prerequisites}
+You will need the following thing(s) to install Linux:
+\begin{enumerate}
+  \item A USB drive with >= 4GB of space
+\end{enumerate}
+
+\subsection{Pop! OS}
+To get started, we will download the official ISO from their website. (https://pop.system76.com/) Also, to note, if you have an NVIDIA GPU, you should select the nvidia option whilst downloading. This will make it a lot easier in the future.
+
+\subsection{MacOS}
+In MacOS you won't need to download any additional software to burn the ISO to your USB drive. Simply navigate to the folder in which you downloaded the ISO, and run the following commands:
+
+\begin{lstlisting}
+lsblk
+\end{lstlisting}
+
+This will show you the drives that you can install to.
+
+\begin{lstlisting}
+sudo dd if=<iso> of=/dev/<drive> status=progress bs=4M
+\end{lstlisting}
+
+After the command fully finishes, simply remove the drive.
 
 \end{document}
