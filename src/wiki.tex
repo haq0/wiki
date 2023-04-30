@@ -9,8 +9,8 @@
 % SETTINGS
 
 \allsectionsfont{\centering}
-\setcounter{tocdepth}{3}
-\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
 
 % CMDS
 
@@ -125,17 +125,16 @@ I will include a tree of things that will be documented ahead, but I would first
 
 \chapter{Getting Started}
 \section{Installation}
-The majority of these steps will work for any Linux distribution, but I will specifically document the process for pop\_os and artixlinux.
+The majority of these steps will work for any Linux distribution, but I will specifically document the process for pop\_os
 \subsection{Prerequisites}
 You will need the following thing(s) to install Linux:
 \begin{enumerate}
   \item A USB drive with >= 4GB of space
 \end{enumerate}
 
-\subsection{Pop! OS}
-To get started, we will download the official ISO from their website. (https://pop.system76.com/) Also, to note, if you have an NVIDIA GPU, you should select the nvidia option whilst downloading. This will make it a lot easier in the future.
+\subsection {Flashing The ISO}
 
-\subsection{MacOS}
+\subsubsection{MacOS}
 In MacOS you won't need to download any additional software to burn the ISO to your USB drive. Simply navigate to the folder in which you downloaded the ISO, and run the following commands:
 
 \begin{lstlisting}
@@ -149,5 +148,61 @@ sudo dd if=<iso> of=/dev/<drive> status=progress bs=4M
 \end{lstlisting}
 
 After the command fully finishes, simply remove the drive.
+
+\subsubsection{Windows}
+Compared to UNIX systems like MacOS, Windows is a bit trickier when it comes to flashing ISOs. You will need to download a program to do it, which we will briefly cover next. Once you have your ISO, you can choose one of many different ISO flashing utilities, but for the purpose of this guide, we will be covering a program called Balena Etcher. 
+You can download etcher at https://www.balena.io/etcher
+
+
+\subsection{Pop!\_OS}
+To get started, we will download the official ISO from their website. (https://pop.system76.com/) Also, to note, if you have an NVIDIA GPU, you should select the nvidia option whilst downloading. This will make it a lot easier in the future.
+
+\subsubsection{Installing the Operating System}
+When you are installing most linux distributions, they will typically offer you a chance to explore the operating system without actually writing to the disk, thus allowing you to get used to what the system looks and feels like. Please note that sometimes performance will not be optimal until it has installed, as it is running off a USB, and you probably won't have many drivers installed yet. 
+When you boot up PopOS, you will be dropped into a live environment, and you should definitely play around with it a bit before downloading. 
+
+Now that you've hopefully played around with it for a while, we can start installing the operating system. Navigate to the bottom dock, and click the gray box. You will be put into a Calamares (Installation tool) menu, and there will be very simple questions asking you about what you want your system to look like. 
+
+\subsubsection{Should I encrypt my disk?}
+Simply put, yes. It is a good idea to encrypt your disk, as it prevents people from pulling data out from it. There are some downsides, though. When you encrypt the disk, things like rescuing a locked account are near impossible, unless you know the decryption key. You also cannot decrypt the drive after.
+
+
+
+\section{Getting Started With Your New Operating System}
+
+Firstly, congratulations on successfully installing Linux! You've already overcome most of the challenge of changing operating systems. Now we can progress to the next steps.
+
+\subsection{Updating Your System Packages}
+On any new Linux install, you should always update the packages to ensure you are using the newest and most up to date versions.
+
+On Pop!\_OS, you can run the following commands to update your packages:
+\begin{lstlisting}
+sudo apt update && sudo apt upgrade
+\end{lstlisting}
+
+\subsection{Using Your Package Manager}
+On Debian based operating systems like Ubuntu and Pop!\_OS, you get to use the `apt` package manager. Here is a list of commands you can use to interact with the package manager:
+\begin{lstlisting}
+sudo apt install <package>
+sudo apt remove <package>
+sudo apt search <package>
+\end{lstlisting}
+
+There are a lot more commands that go with `apt`, but for now that should suffice.
+
+\subsection{What actually is a Linux distribution?}
+Simply put, a linux distribution is any system that consists of the Linux kernel, and a set of coreutils. The Kernel is responsible for enabling everything to work (For example, the Linux Kernel enables people to use various pieces of hardware.) But at a higher level, your distro consists of a lot more software than that.
+
+\begin{enumerate}
+  \item [Kernel] What enables your system to use programs, hardware, and more.
+  \item [Core Utilities] The programs that let you interact with your computer (e.g. `ls`, `cp`, `mkdir`, etc.)
+  \item [Init System] The program that starts other programs and services.
+  \item [Boot Loader] The program that loads the kernel into memory.
+  \item [Package Manager] The program that installs and updates packages.
+  \item [Terminal Emulator] The program that runs commands in your terminal.
+  \item [File System] The system that allows you to interact with files and create stuff.
+  \item [Shell] The program that wraps your kernel.
+\end{enumerate}
+
 
 \end{document}
