@@ -204,5 +204,37 @@ Simply put, a linux distribution is any system that consists of the Linux kernel
   \item [Shell] The program that wraps your kernel.
 \end{enumerate}
 
+On most distributions, you will never really really interact with things like the kernel or init system directly, as there are many wrappers that are in place to prevent you from messing it up.
+
+
+\subsection{Alternative ways to install packages}
+
+On most modern linux distributions, there will be some sort of graphical way to install packages (typically called a software centre or application manager,) for example, on Pop!\_OS, there is a program called 'pop shop' which lets you install software graphically. I do not recommend that you use these graphical methods, as they abstract over the actual package manager, and any issues that you incur may not be easily solvable.
+
+\chapter{System}
+\subsection{Structure of a Linux Distribution}
+\subsubsection{File System Structure}
+On Linux, we have a way of structuring our file system that differs a lot from things like Windows, but is somewhat similar to Unix based operating systems like MacOSX or *BSD. Here is a small tree view of the file system with a summary:
+
+\begin{lstlisting}
+-> / (root directory)
+  -> /bin (user binaries)
+  -> /sbin (system binaries)
+  -> /etc (configuration files)
+  -> /dev (device files)
+  -> /proc (processes (fake directory))
+  -> /tmp (temporary files)
+  -> /usr (user files/programs)
+  -> /var (variable files)
+  -> /home (home directory for users other than root)
+  -> /root (root directory)
+  -> /boot (boot loader files)
+  -> /mnt (mount points)
+  -> /lib (system library files)
+  -> /sys (system files)
+  -> opt (optional files)
+\end{lstlisting}
+
+
 
 \end{document}
